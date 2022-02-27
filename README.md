@@ -15,7 +15,7 @@
 - Standart Svelte JS
 
 ## 3. Realization details
-- Documents stored in files on server
+- Documents stored as files in folder on server
 
 ## 4. Disign details
 - Simple Minimalistic Design
