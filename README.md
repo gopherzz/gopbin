@@ -9,6 +9,7 @@
 
 ### 2.1 Golang (Backend)
 - Fiber Framework
+- [https://github.com/joho/godotenv](godotenv)
 - Standart Library
 
 ### 2.2 Svelte (Frontend)
