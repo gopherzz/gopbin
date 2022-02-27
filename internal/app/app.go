@@ -2,8 +2,8 @@ package app
 
 import (
 	"github.com/gopherzz/gopbin/internal/handler"
+	"github.com/gopherzz/gopbin/internal/repository"
 	"github.com/gopherzz/gopbin/internal/services"
-	"github.com/gopherzz/gopbin/repository"
 )
 
 type App struct {

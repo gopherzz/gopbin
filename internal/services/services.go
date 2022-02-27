@@ -2,7 +2,7 @@ package services
 
 import (
 	"github.com/gopherzz/gopbin/internal/models"
-	"github.com/gopherzz/gopbin/repository"
+	"github.com/gopherzz/gopbin/internal/repository"
 )
 
 type Documents interface {
