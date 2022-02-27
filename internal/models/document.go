@@ -5,6 +5,6 @@ type DocumentRequest struct {
 }
 
 type Document struct {
-	ID   string `json:"id"`
+	ID      string `json:"id"`
 	Content string `json:"content"`
 }
