@@ -8,9 +8,8 @@
 ## 2. Technologies
 
 ### 2.1 Golang (Backend)
-- Fiber Framework
+- [Fiber Framework](https://github.com/gofiber/fiber/)
 - [godotenv](https://github.com/joho/godotenv)
-- Standart Library
 
 ### 2.2 Svelte (Frontend)
 - Standart Svelte JS
