@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gopherzz/gopbin/internal/models"
+	"github.com/gopherzz/gopbin/pkg/id"
 )
 
 const (
@@ -25,7 +26,7 @@ func NewDocumentsRepo(docsFolderPath string) *DocumentsRepo {
 	}
 }
 
-func (r *DocumentsRepo) formatDocPath(id string) string {
+func (r *DocumentsRepo) formatDocPath(id id.ID) string {
 	return fmt.Sprintf(r.pathFormat, id)
 }
 
@@ -43,7 +44,7 @@ func (r *DocumentsRepo) Create(doc *models.Document) (err error) {
 	return nil
 }
 
-func (r *DocumentsRepo) Read(id string) (*models.Document, error) {
+func (r *DocumentsRepo) Read(id id.ID) (*models.Document, error) {
 	f, err := os.Open(r.formatDocPath(id))
 	if err != nil {
 		return nil, err

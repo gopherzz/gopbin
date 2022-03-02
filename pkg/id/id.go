@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+type ID string
+
 // Sum of degit symbols and upper/lower case latin symbols
 const idCharsCount = 10 + 26 + 26
 const idDefaultLen = 6
@@ -31,10 +33,10 @@ func randomSym() rune {
 	return idChars[rand.Intn(idCharsCount)]
 }
 
-func GenerateId() string {
-	id := ""
+func GenerateId() ID {
+	var id ID
 	for i := 0; i < idDefaultLen; i++ {
-		id += string(randomSym())
+		id += ID(randomSym())
 	}
 
 	return id

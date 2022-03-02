@@ -16,7 +16,7 @@ func NewDocumentsService(repo *repository.Repository) *DocumentsService {
 	}
 }
 
-func (s *DocumentsService) CreateDocument(docReq *models.DocumentRequest) (docId string, err error) {
+func (s *DocumentsService) CreateDocument(docReq *models.DocumentRequest) (docId id.ID, err error) {
 	docId = id.GenerateId()
 
 	return docId, s.repo.Create(&models.Document{
@@ -25,6 +25,6 @@ func (s *DocumentsService) CreateDocument(docReq *models.DocumentRequest) (docId
 	})
 }
 
-func (s *DocumentsService) ReadDocument(id string) (*models.Document, error) {
+func (s *DocumentsService) ReadDocument(id id.ID) (*models.Document, error) {
 	return s.repo.Read(id)
 }

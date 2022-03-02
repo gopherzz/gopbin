@@ -5,6 +5,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gopherzz/gopbin/internal/models"
+	"github.com/gopherzz/gopbin/pkg/id"
 )
 
 func (h *Handler) createDoc(c *fiber.Ctx) error {
@@ -22,7 +23,7 @@ func (h *Handler) createDoc(c *fiber.Ctx) error {
 }
 
 func (h *Handler) getDoc(c *fiber.Ctx) error {
-	id := c.Params("id", "000000")
+	id := id.ID(c.Params("id", "000000"))
 
 	doc, err := h.services.ReadDocument(id)
 	if err != nil {
